@@ -41,12 +41,17 @@
 	</div>
 	<!-- END SECTION: Navigation -->
 	
+
+
+
 	<main role="main">
 		<section id="project-details" class="project-section" style="padding-top: 95px; margin-left: auto; margin-right: auto; max-width: 1200px;">
 			<div class="container">
-			  <h2 class="project-title">AutoVidProd: Revolutionizing Video Production</h2>
+			  <h1 class="project-title">AutoVidProd: Revolutionizing Video Production</h1>
 			  <img src="assets/img/work-jabbr.jpg" alt="AutoVidProd Interface" class="project-image">
 			  <div class="project-description">
+			</p>
+			<p>
 				<p>
 				  In the fast-paced world of combat sports, capturing every thrilling moment is crucial. AutoVidProd is at the forefront of this challenge, offering an innovative solution to video production. Born from a collaboration with the tech pioneers at Jabbr.ai, this software suite transforms the arduous task of video editing into a seamless, automated process.
 				</p>
@@ -89,6 +94,35 @@
 					The side-by-side videos above demonstrate the comparison between the original camera streams and the enhanced output from AutoVidProd.
 				</p>
 				</div>
+
+
+
+
+				<h2>Video Synchronization Based on Feature Trajectories</h2>
+
+				<p>This repository contains an implementation of a video synchronization algorithm based on feature trajectories, as described in the paper <a href="https://vcai.mpi-inf.mpg.de/files/DAGM2012/DAGM2012.pdf">Feature-Based Multi-Video Synchronization with
+				Subframe Accuracy, A. Elhayek et al</a>. The algorithm aims to synchronize multiple videos by extracting features, constructing trajectories, and matching these trajectories across videos.</p>
+				<p>Synchronizing videos is a crucial task in many multimedia applications ranging from film production to sports broadcasting. Traditional methods often rely on timestamps or manual alignment, which can be error-prone or time-consuming. This implementation offers an automated approach by leveraging the power of computer vision techniques. By extracting features from video frames and constructing trajectories, the algorithm can determine the synchronization parameters that align videos in time.</p>
+
+				<p><img src="assets/img/project-images/trajectory_construction.gif" alt="Trajectory Construction Demonstration" /></p>
+
+				<h2>Action Recognition in Videos</h2>
+
+				<p>This script identifies the start and end of a round in boxing video footage.</p>
+
+				<h2>Key Features:</h2>
+
+				<ul>
+				<li><strong>Video Processing</strong>: Load a video and process it frame by frame.</li>
+				<li><strong>Action Recognition</strong>: Utilizes the R(2+1)D-18 model, a 3D ResNet model pretrained on the Kinetics-400 dataset.</li>
+				<li><strong>Frame Transformation</strong>: Applies image transformations (resize, center crop, and normalization) using the <code>albumentations</code> library.</li>
+				<li><strong>Output Video</strong>: Generates an output video with frames labeled with the detected action.</li>
+				</ul>
+
+			</p>
+			<p>
+				<p><img src="assets/img/project-images/joyce_gif.gif" alt="Action Recognition Demonstration" /></p>
+
 			</section>
 		
 		

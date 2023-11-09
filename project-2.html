@@ -44,49 +44,42 @@
 	<main role="main">
 		<section id="project-details" class="project-section" style="padding-top: 95px; margin-left: auto; margin-right: auto; max-width: 1200px;">
 			<div class="container">
-			  <h2 class="project-title">AutoVidProd: Revolutionizing Video Production</h2>
-			  <img src="assets/img/work-jabbr.jpg" alt="AutoVidProd Interface" class="project-image">
+			  <h1 class="project-title">CNN* The Clothing Neural Network</h1>
+			  <img src="assets/img/work-CNN.png" alt="CNN interfaces" class="project-image" style="max-width: 100%; height: auto;">
 			  <div class="project-description">
 				<p>
-				  In the fast-paced world of combat sports, capturing every thrilling moment is crucial. AutoVidProd is at the forefront of this challenge, offering an innovative solution to video production. Born from a collaboration with the tech pioneers at Jabbr.ai, this software suite transforms the arduous task of video editing into a seamless, automated process.
-				</p>
-				<p>
-				  By harnessing the power of Jabbr.ai's DeepStrike model, AutoVidProd intelligently navigates through hours of footage to present the most gripping angles and moments. Imagine a system that knows exactly when to switch camera views for maximum impact, creating a narrative that feels both dynamic and engaging. This isn't just an editing tool; it's a storyteller that highlights the peaks of adrenaline and the triumphs of athletes.
-				</p>
-				<p>
-				  The result? Studio-quality productions that would normally require a team of editors, now accomplished at the click of a button. From pinpointing pivotal moments with 'Highlights Extraction' to applying dramatic overlays in real-time, AutoVidProd delivers a viewer experience that's as intense as the sport itself.
-				</p>
-			  </div>
-			  <div class="project-details">
-				<h3>Behind the Scenes of Innovation</h3>
-				<p>
-				  At the heart of AutoVidProd's magic is a blend of features designed to cater to every aspect of video production:
-				</p>
-				<ul>
-				  <li><strong>Camera Angle Selection</strong>: The software's keen 'eye' selects the most impactful shot at any given moment, ensuring viewers are always in the center of action.</li>
-				  <li><strong>Highlights Extraction</strong>: Like a seasoned editor, it sifts through content to showcase the climactic punches and strategic plays that define a match.</li>
-				  <li><strong>ROI Tracking</strong>: Keeping focus on where the action is, providing a seamless viewing experience.</li>
-				  <li><strong>Overlay Application</strong>: Enhances the storytelling by adding informative and visually appealing graphics during key moments.</li>
-				  <li><strong>Customizable Configuration</strong>: Gives the creators flexibility to adapt the output to their vision.</li>
-				  <li><strong>Multi-Camera Support</strong>: Integrates multiple perspectives to give a comprehensive portrayal of the event.</li>
-				</ul>
-				<p>
-				  These features come together to create a product that's not only technologically advanced but also intuitive and accessible for producers of all skill levels.
-				</p>
-				<p>
-				<h3>Watch the Demo</h3>
-				<div class="video-demo-container">
-					<div class="video-demo">
-					<!-- Embed Original Camera Streams -->
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/XWQKIbC_E2Q" title="Original Camera Streams" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-					<div class="video-demo">
-					<!-- Embed AutoVidProd Output -->
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/knAk3Bfg11Y" title="AutoVidProd Output" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-				</div>
-				<p>
-					The side-by-side videos above demonstrate the comparison between the original camera streams and the enhanced output from AutoVidProd.
+	
+					
+					<p>Deep learning application designed for image inference, built with a neural network trained on the Zalando fashion-MNIST dataset <a href="https://github.com/zalandoresearch/fashion-mnist">https://github.com/zalandoresearch/fashion-mnist</a>. The dataset contains images of fashion items, and the model classifies these images into one of ten categories.</p>
+					
+					<p><img src="assets/img/project-images/CNN_classes.png" alt="Clothing classes" /></p>
+					
+					<h3>Model Architecture</h3>
+					
+					<p>The neural network used for training is constructed using the <code>fc_model.Network</code> class. Below are the key components:</p>
+					
+					<ul>
+					<li><p><strong>Network Architecture:</strong> The <code>Network</code> class in <code>fc_model.py</code> defines a fully connected neural network. It takes the input size, output size, and a list of integers representing the sizes of hidden layers as parameters. The architecture can be dynamically adjusted, but in the current project, it is instantiated with an input size of 784, output size of 10, and three hidden layers with sizes [512, 256, 128] respectively:</p>
+					
+					<p><pre><code>model = fc_model.Network(784, 10, [512, 256, 128])
+					</code></pre></p></li>
+					<li><p><strong>Activation Function:</strong> The network uses ReLU (Rectified Linear Unit) as the activation function for hidden layers and LogSoftmax for the output layer.</p></li>
+					<li><p><strong>Loss Function:</strong> The negative log likelihood loss function (<code>nn.NLLLoss()</code>) is utilized for training the network.</p></li>
+					<li><p><strong>Optimizer:</strong> The Adam optimizer is employed with a learning rate of <code>0.001</code> to adjust the weights in the network during training.</p></li>
+					</ul>
+					
+
+					<p><img src="assets/img/project-images/clothing_inference.png" alt="Clothing Inference" /></p>
+
+
+					<h3>Training Details</h3>
+					
+					<ul>
+					<li><strong>Epochs:</strong> The network is trained for 20 epochs. Each epoch iterates over the entire dataset to update the model's weights based on the calculated loss.</li>
+					</ul>
+					
+					The full repository can be found at
+					<a href="https://github.com/javAlborz/ClothingNeuralNetwork">https://github.com/javAlborz/ClothingNeuralNetwork</a>.</p>
 				</p>
 				</div>
 			</section>
