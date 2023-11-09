@@ -31,7 +31,8 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
-			<a class="navigation__cta button" href="#0">Get A Quote</a>
+			<!-- Updated button text and added href attribute to link to the CV PDF -->
+			<a class="navigation__cta button" href="CV.pdf" download="CV_Alborz_Sabet.pdf">Download CV</a>
 			<div class="navigation__burger">
 				<span class="navigation__burger-el navigation__burger-el--top"></span>
 				<span class="navigation__burger-el navigation__burger-el--middle"></span>
@@ -40,6 +41,7 @@
 		</div>
 	</div>
 	<!-- END SECTION: Navigation -->
+
 	<!-- SECTION: Intro -->
 	<header class="header">
 		<div class="introduction">
@@ -63,34 +65,24 @@
 					</div>
 					<p class="about__content-signature">Alborz Sabet</p>
 				</div>
-				<img class="about__visual" src="assets/img/new.png" alt="Alborz Sabet">
+				<img class="about__visual" src="assets/img/transparent_profilepic.png" alt="Alborz Sabet">
 			</div>
 		</section>
-		<!-- END SECTION: About -->
 
-		<!--
 		<section class="app-design">
 			<div class="app-design__wrapper wrapper--large">
 				<div class="app-design__content blurb">
-					<h2 class="blurb__heading">Topaz App <br>Design</h2>
-					<p class="blurb__copy blurb__copy--tight">App design for Topaz, an awesome creative company from New York.</p>
-					<a class="transform-link" href="#0">Check it out</a>
-				</div>
+					<h2 class="blurb__heading">My Journey</h2>
+					<p class="blurb__copy">Navigating the dynamic intersection of software engineering and applied AI, I've immersed myself in the evolving role of the AI Engineer. As we've moved into 2023, it's evident how the AI landscape has shifted; tasks that were once the domain of researchers are now accessible to AI professionals like myself.</p>
+										
+					<p class="blurb__copy">The AI ecosystem of today has allowed me to transition between tweaking models and building solutions using APIs, merging traditional programming techniques with the capabilities of modern AI tools. Whether it's evaluating powerful proprietary models or leveraging open-source options, I've positioned myself to harness their potential for practical applications. Integrating machine learning models with human-written code, I aim to produce efficient and impactful solutions. In this evolving landscape, my objective is not just to keep up but to be a proactive contributor, turning advancements into beneficial, tangible applications.</p>
+				  </div>
 			</div>
 			<figure class="app-design__visual"></figure>
 		</section>
 
-		<section class="web-design">
-			<div class="web-design__wrapper wrapper--small">
-				<div class="web-design__content blurb">
-					<h2 class="blurb__heading">MGF Web <br>Design</h2>
-					<p class="blurb__copy blurb__copy--tight">Web design I made for MGF, an amazing architecture agency from London.</p>
-					<a class="transform-link" href="#0">Check it out</a>
-				</div>
-			</div>
-			<figure class="web-design__visual"></figure>
 		</section>
-		-->
+		
 		<!-- SECTION: Work -->
 
 		<!-- SECTION: Work -->
@@ -150,17 +142,17 @@
 			<div class="blog__wrapper wrapper--large">
 				<article class="blog__post">
 					<div class="blog__post-thumbnail">
-						<img src="assets/img/blog-post-1.jpg" alt="Man viewing work plans">
+						<img src="assets/img/blog-1-thumbnail.png" alt="Man viewing work plans">
 					</div>
 					<div class="blog__post-excerpt">
-						<h3>Days in the office</h3>
-						<p>I love using UI Kits vs website templates because UI Kits give you an easier way to use elements compared to templates.</p>
-						<a class="transform-link" href="#0">Read full article</a>
+						<h3>Object removal in Images</h3>
+						<p>Sometimes I find myself having captured the perfect photography, only to wish for a small part of it to be edited out. While I'm not proficient in editing software like photoshop, I know of other approaches to solve the problem.</p>
+						<a class="transform-link" href="blog-1.html">Read full article</a>
 					</div>
 				</article>
 				<article class="blog__post">
 					<div class="blog__post-thumbnail">
-						<img src="assets/img/blog-post-2.jpg" alt="Man hanging pictures">
+						<img src="assets/img/blog-post-3.jpg" alt="Man hanging pictures">
 					</div>
 					<div class="blog__post-excerpt">
 						<h3>Why I use CCO images</h3>
@@ -180,27 +172,30 @@
 				</article>
 			</div>
 			<div class="blog__view-more">
-				<a class="button blog__view-more--el" href="#0">View More</a>
+				<a class="button blog__view-more--el" href="blog-list.html">View More</a>
 			</div>
 		</section>
 		<!-- END SECTION: Blog -->
+
 		<!-- SECTION: Contact -->
 		<section id="contact" class="contact">
 			<h2 class="contact__heading title">Contact Me</h2>
 			<div class="contact__wrapper wrapper--large">
 				<div class="contact__visual">
-					<img src="assets/img/contact-visual.png" alt="Alborz Sabet's location">
+					<img src="assets/img/location.png" alt="Alborz Sabet's location">
 				</div>
 				<!-- Simple form setup: formspree.io -->
-				<form class="contact__form">
-					<input class="contact__form-el contact__form-el--name" type="text" placeholder="Your Name" spellcheck="false">
-					<input class="contact__form-el contact__form-el--email" type="email" placeholder="Your Email" spellcheck="false">
-					<textarea class="contact__form-el contact__form-el--message" placeholder="Your Message"></textarea>
+				<form class="contact__form" action="https://formspree.io/f/xqkvjgrq" method="POST">
+					<input class="contact__form-el contact__form-el--name" type="text" name="name" placeholder="Your Name" spellcheck="false" required>
+					<input class="contact__form-el contact__form-el--email" type="email" name="_replyto" placeholder="Your Email" spellcheck="false" required>
+					<textarea class="contact__form-el contact__form-el--message" name="message" placeholder="Your Message" required></textarea>
 					<input class="contact__form-el contact__form-el--submit" type="submit" value="Send">
 				</form>
+				
 			</div>
 		</section>
 		<!-- END SECTION: Contact -->
+		
 	</main>
 	<!-- SECTION: Footer -->
 	<footer class="footer">
@@ -237,5 +232,8 @@
 	ga('send', 'pageview');
 	</script>
 	-->	
+
+	
+	
 </body>
 </html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Personal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Free HTML5 Template plus Photoshop design">
+  <meta name="keywords" content="free html template, portfolio, html5, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+	<!-- SECTION: Splashscreen -->
+	<div class="splashscreen">
+		<div class="preloader">
+			<span class="preloader__text">Loading</span>
+		</div>
+	</div>
+	<!-- END SECTION: Splashscreen -->
+	<!-- SECTION: Navigation -->
+	<div id="top" class="navigation">
+		<div class="navigation__wrapper wrapper--large">
+			<a class="navigation__logo logo" href="#0">AS</a>
+			<nav class="navigation__container">
+				<ul class="navigation__list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#work">Portfolio</a></li>
+					<li><a href="index.html#blog">Blog</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<a class="navigation__cta button" href="CV.pdf" download="CV_Alborz_Sabet.pdf">Download CV</a>
+			<div class="navigation__burger">
+				<span class="navigation__burger-el navigation__burger-el--top"></span>
+				<span class="navigation__burger-el navigation__burger-el--middle"></span>
+				<span class="navigation__burger-el navigation__burger-el--bottom"></span>
+			</div>
+		</div>
+	</div>
+	<!-- END SECTION: Navigation -->
+	
+	<main role="main">
+
+		<section id="blog-details" class="blog-section" style="padding-top: 95px; margin-left: auto; margin-right: auto; max-width: 1200px;">
+			<div class="container">
+		
+					<header class="blog-header">
+					<h1>Object removal in Images</h1>
+					<div class="post-details">
+						<span class="date">Published on July 1, 2023</span> |
+						<span class="author">by Jane Doe</span>
+					</div>
+					</header>
+				
+					<section class="blog-content">
+					<article class="post">
+						<h2>Behind the Scenes: Technical Dive into Semantic Segmentation for Object Removal</h2>
+
+						<p>Semantic segmentation is one of the key tasks in computer vision that has been revolutionized by deep learning. At its core, semantic segmentation involves classifying each pixel in an image into a predefined category. This pixel-wise classification is particularly useful for detailed image editing tasks, such as object removal.</p>
+						
+						<h3>The Deep Learning Approach</h3>
+						
+						<p>Modern semantic segmentation models are typically built using Convolutional Neural Networks (CNNs). These networks are trained on large datasets with annotated images where each pixel is labeled with a class. The CNN learns to recognize patterns and textures associated with different objects, allowing it to accurately predict the class of each pixel in new, unseen images.</p>
+						
+						<h3>Architectures and Models</h3>
+						
+						<p>Several architectures have been influential in advancing semantic segmentation:</p>
+						
+						<ul>
+						<li><strong>Fully Convolutional Networks (FCNs)</strong>: FCNs can take input of any size and output a segmentation map.</li>
+						<li><strong>U-Net</strong>: Designed for biomedical image segmentation, U-Net architecture features a contracting path to capture context and a symmetric expanding path for precise localization.</li>
+						<li><strong>DeepLab</strong>: DeepLab models use atrous convolutions to capture multi-scale context by adopting multiple parallel filters with different rates.</li>
+						</ul>
+						
+						<h3>Object Removal with Semantic Segmentation</h3>
+						
+						<p>In the context of object removal, these models work as follows:</p>
+						
+						<ol>
+						<li><strong>Segmentation Map Generation</strong>: When an image is fed into the model, a segmentation map is generated, assigning a label to each pixel.</li>
+						<li><strong>Target Object Isolation</strong>: The target object to be removed is isolated based on the segmentation map. This could be done automatically by the model if trained for specific object classes or manually by the user.</li>
+						<li><strong>Masking and Inpainting</strong>: The isolated object is then masked, and inpainting techniques are applied. Inpainting uses information from the surrounding pixels to fill in the gap left by the removed object, maintaining the coherence of the background.</li>
+						</ol>
+						
+						<h3>Inpainting Techniques</h3>
+						
+						<p>Inpainting can be handled by traditional algorithms like the PatchMatch or Telea’s method, but deep learning offers more advanced solutions:</p>
+						
+						<ul>
+						<li><strong>Generative Adversarial Networks (GANs)</strong>: GANs can generate realistic textures and patterns that blend seamlessly with the surrounding area.</li>
+						<li><strong>Partial Convolutions</strong>: Proposed by NVIDIA, this technique involves convolutional layers that can conditionally update themselves based on the presence of the content, making it ideal for handling irregular masks created after object removal.</li>
+						</ul>
+						
+						<h3>Training and Challenges</h3>
+						
+						<p>Training semantic segmentation models requires careful consideration:</p>
+						
+						<ul>
+						<li><strong>Data Quality</strong>: High-quality, pixel-accurately labeled data is essential.</li>
+						<li><strong>Class Imbalance</strong>: Some classes are more frequent than others, which can lead to biased models.</li>
+						<li><strong>Boundary Precision</strong>: Achieving high precision around the boundaries of objects is a challenging task, often addressed by combining semantic segmentation with edge detection.</li>
+						</ul>
+						
+						<p>By leveraging these advanced deep learning techniques, software tools can perform object removal with astonishing accuracy and speed, saving countless hours of manual editing and allowing professionals to focus on the creative aspects of image manipulation.</p>
+						
+					</article>
+
+
+					<section class="image-comparison">
+						<h2>Photoshop AI Removal Tool - Before and After</h2>
+						<div class="comparison-container">
+						  <div class="comparison-image">
+							<h3>Before</h3>
+							<img src="assets/img/blog-images/kamp-1-med.jpeg" alt="Image before AI removal">
+						  </div>
+						  <div class="comparison-image">
+							<h3>After</h3>
+							<img src="assets/img/blog-images/kamp-1-uten.jpg" alt="Image after AI removal">
+						  </div>
+						</div>
+					  </section>
+					  
+				
+					<aside class="sidebar">
+						<div class="widget">
+						<h3>About the Author</h3>
+						<p>This section can contain a brief bio of the author, or anything else that might be relevant to readers.</p>
+						</div>
+						<div class="widget">
+						<h3>Recent Posts</h3>
+						<ul>
+							<li><a href="#">Recent Post 1</a></li>
+							<li><a href="#">Recent Post 2</a></li>
+							<li><a href="#">Recent Post 3</a></li>
+						</ul>
+						</div>
+						<!-- Additional widgets can be added here -->
+					</aside>
+					</section>
+				
+					<footer class="blog-footer">
+					<!-- Footer content goes here -->
+					</footer>
+			
+	</main>
+	<!-- SECTION: Footer -->
+	<footer class="footer">
+		<div class="footer__wrapper wrapper--large">
+			<p class="footer__copyright no-margin">&copy; 2023 Alborz Sabet</p>
+			<a class="footer__logo logo" href="#0">AS</a>
+			<a class="footer__arrow" href="#top">
+				<svg class="footer__arrow-el" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" viewBox="0 0 130 65" xml:space="preserve" enable-background="new 0 0 130 65"><g transform="translate(0.000000,65.000000) scale(0.100000,-0.100000)"><path d="M315.4 365c-336-305-345-315-290-351 18-12 32-14 45-8 10 5 145 123 300 262l281 253 196-178c108-98 237-215 287-260 50-46 98-83 107-83s27 9 40 19c20 16 22 23 14 46 -12 33-623 585-647 585C638.4 650 489.4 522 315.4 365z"/></g></svg>
+			</a>
+		</div>
+	</footer>
+	<!-- END SECTION: Footer -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- jQuery local fallback -->
+	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+	<script src="assets/js/functions-min.js"></script>
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID and uncomment -->
+	<!--
+	<script>
+	(function(b, o, i, l, e, r) {
+		b.GoogleAnalyticsObject = l;
+		b[l] || (b[l] =
+			function() {
+				(b[l].q = b[l].q || []).push(arguments)
+			});
+		b[l].l = +new Date;
+		e = o.createElement(i);
+		r = o.getElementsByTagName(i)[0];
+		e.src = '//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e, r)
+	}(window, document, 'script', 'ga'));
+	ga('create', 'UA-XXXXX-X', 'auto');
+	ga('send', 'pageview');
+	</script>
+	-->	
+</body>
+</html>
