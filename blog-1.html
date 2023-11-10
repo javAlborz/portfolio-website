@@ -47,22 +47,19 @@
 			<div class="container">
 		
 					<header class="blog-header">
-					<h1>Object removal in Images</h1>
+					<h1>Removal of unwanted objects in Images: The use of semantic segmentation</h1>
 					<div class="post-details">
 						<span class="date">Published on July 1, 2023</span> |
-						<span class="author">by Jane Doe</span>
+						<span class="author"> Alborz Sabet</span>
 					</div>
 					</header>
 				
 					<section class="blog-content">
 					<article class="post">
-						<h2>Behind the Scenes: Technical Dive into Semantic Segmentation for Object Removal</h2>
 
-						<p>Semantic segmentation is one of the key tasks in computer vision that has been revolutionized by deep learning. At its core, semantic segmentation involves classifying each pixel in an image into a predefined category. This pixel-wise classification is particularly useful for detailed image editing tasks, such as object removal.</p>
-						
-						<h3>The Deep Learning Approach</h3>
-						
-						<p>Modern semantic segmentation models are typically built using Convolutional Neural Networks (CNNs). These networks are trained on large datasets with annotated images where each pixel is labeled with a class. The CNN learns to recognize patterns and textures associated with different objects, allowing it to accurately predict the class of each pixel in new, unseen images.</p>
+						<p></p>
+						<p>Semantic segmentation is one of the key tasks in computer vision that has been revolutionized by deep learning. At its core, semantic segmentation involves classifying each pixel in an image into a predefined category. This pixel-wise classification is particularly useful for detailed image editing tasks, such as object removal.						
+						Modern semantic segmentation models are typically built using Convolutional Neural Networks (CNNs). These networks are trained on large datasets with annotated images where each pixel is labeled with a class. The CNN learns to recognize patterns and textures associated with different objects, allowing it to accurately predict the class of each pixel in new, unseen images.</p>
 						
 						<h3>Architectures and Models</h3>
 						
@@ -85,13 +82,14 @@
 						</ol>
 						
 						<h3>Inpainting Techniques</h3>
-						
+
 						<p>Inpainting can be handled by traditional algorithms like the PatchMatch or Telea’s method, but deep learning offers more advanced solutions:</p>
 						
-						<ul>
+						<ol>
 						<li><strong>Generative Adversarial Networks (GANs)</strong>: GANs can generate realistic textures and patterns that blend seamlessly with the surrounding area.</li>
 						<li><strong>Partial Convolutions</strong>: Proposed by NVIDIA, this technique involves convolutional layers that can conditionally update themselves based on the presence of the content, making it ideal for handling irregular masks created after object removal.</li>
-						</ul>
+						<li><strong>Adobe Firefly</strong>: A cutting-edge tool from Adobe, Firefly utilizes advanced machine learning algorithms for content-aware fill tasks. It excels at understanding the context of an image, enabling it to fill gaps left by object removal with textures and elements that are visually coherent with the surrounding area. Firefly's strength lies in its ability to adapt to various image styles and complexities, offering a powerful solution for both amateur and professional photo editing.</li>
+						</ol>
 						
 						<h3>Training and Challenges</h3>
 						
@@ -109,42 +107,51 @@
 
 
 					<section class="image-comparison">
-						<h2>Photoshop AI Removal Tool - Before and After</h2>
+						<h2>Adobe Firefly - Object removel with generative fill</h2>
 						<div class="comparison-container">
 						  <div class="comparison-image">
-							<h3>Before</h3>
+							<h3>Before; ropes getting in the way of the frame</h3>
 							<img src="assets/img/blog-images/kamp-1-med.jpeg" alt="Image before AI removal">
 						  </div>
 						  <div class="comparison-image">
-							<h3>After</h3>
+							<h3>After; ropes removed from image frame</h3>
 							<img src="assets/img/blog-images/kamp-1-uten.jpg" alt="Image after AI removal">
 						  </div>
 						</div>
 					  </section>
+
+					  <p></p>
+					  <section class="image-content">
+						<p>One intriguing aspect of using advanced tools like Adobe Firefly for object removal is the phenomenon of 'hallucinated' content during the inpainting process. When filling in the gaps left by removed objects, these algorithms don't just replicate surrounding textures and patterns; they often generate entirely new content that wasn't in the original image. This 'hallucination' happens as the model predicts what could plausibly exist in the removed object's place, based on the context and structure of the surrounding area. This step is particularly fascinating, as it's where the models creative capabilities come into play, often leading to surprisingly realistic and seamless results. The following images showcase this process, where an intermediate step reveals an unique approach to reconstructing the image, before finalizing the removal seamlessly.</p>
+					</section>
+					
+
+					<section class="image-comparison">
+					<div class="comparison-container">
+						<div class="comparison-image">
+						<h3>Before</h3>
+						<img src="assets/img/blog-images/kamp-2-med.jpeg" alt="Image before AI removal">
+						</div>
+						<div class="comparison-image">
+						<h3>Intermediate step</h3>
+						<img src="assets/img/blog-images/kamp-2-litt.jpeg" alt="Image after AI removal">
+						</div>
+						<div class="comparison-image">
+						<h3>After</h3>
+						<img src="assets/img/blog-images/kamp-2-uten.jpeg" alt="Image after AI removal">
+						</div>
+					</div>
+					</section>
+
+					  
 					  
 				
-					<aside class="sidebar">
-						<div class="widget">
-						<h3>About the Author</h3>
-						<p>This section can contain a brief bio of the author, or anything else that might be relevant to readers.</p>
-						</div>
-						<div class="widget">
-						<h3>Recent Posts</h3>
-						<ul>
-							<li><a href="#">Recent Post 1</a></li>
-							<li><a href="#">Recent Post 2</a></li>
-							<li><a href="#">Recent Post 3</a></li>
-						</ul>
-						</div>
-						<!-- Additional widgets can be added here -->
-					</aside>
-					</section>
 				
 					<footer class="blog-footer">
 					<!-- Footer content goes here -->
 					</footer>
-			
 	</main>
+
 	<!-- SECTION: Footer -->
 	<footer class="footer">
 		<div class="footer__wrapper wrapper--large">
