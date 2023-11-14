@@ -4016,33 +4016,58 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
             }),
             (e.ScrollMagic = t);
     }),
-    $(document).ready(function () {
-        function t() {
-            $(".navigation__burger").toggleClass("navigation__burger--is-open"), $(".navigation__container").toggleClass("navigation__container--is-open"), $("html, body").toggleClass("scroll-lock");
-        }
-        if (
-            ($(window).load(function () {
-                $(".splashscreen").addClass("splashscreen--is-hidden"),
-                    setTimeout(function () {
-                        $(".splashscreen").css({ display: "none" });
-                        var t = $(".introduction__content-el--name"),
-                            e = $(".introduction__content-el--job");
-                        TweenLite.to([t, e], 0.8, { x: 0, opacity: 1, ease: Power1.easeOut });
-                    }, 800);
-            }),
-            $(".navigation__burger").click(function () {
-                t();
-            }),
+	$(document).ready(function () {
+		function t() {
+			$(".navigation__burger").toggleClass("navigation__burger--is-open"), $(".navigation__container").toggleClass("navigation__container--is-open"), $("html, body").toggleClass("scroll-lock");
+		}
+	 
+		function smoothScroll(target, duration) {
+			var targetPosition = $(target).offset().top;
+			var startPosition = $(window).scrollTop();
+			var distance = targetPosition - startPosition;
+			var startTime = null;
+	 
+			function animation(currentTime) {
+				if (startTime === null) startTime = currentTime;
+				var timeElapsed = currentTime - startTime;
+				var run = ease(timeElapsed, startPosition, distance, duration);
+				$(window).scrollTop(run);
+				if (timeElapsed < duration) requestAnimationFrame(animation);
+			}
+	 
+			function ease(t, b, c, d) {
+				t /= d / 2;
+				if (t < 1) return c / 2 * t * t + b;
+				t--;
+				return -c / 2 * (t * (t - 2) - 1) + b;
+			}
+	 
+			requestAnimationFrame(animation);
+		}
+	 
+		if (
+			($(window).load(function () {
+				$(".splashscreen").addClass("splashscreen--is-hidden"),
+					setTimeout(function () {
+					   $(".splashscreen").css({ display: "none" });
+					   var t = $(".introduction__content-el--name"),
+						   e = $(".introduction__content-el--job");
+					   TweenLite.to([t, e], 0.8, { x: 0, opacity: 1, ease: Power1.easeOut });
+					}, 800);
+			}),
+			$(".navigation__burger").click(function () {
+				t();
+			}),
 			$('a[href*="#"]:not([href="#0"])').click(function (e) {
 				var i = $(this).attr("href");
 				if (!i.includes("index.html")) {
 					e.preventDefault();
 					$(".navigation__container").hasClass("navigation__container--is-open") && t();
-					window.scrollTo({ top: $(i).offset().top, behavior: 'smooth' });
+					smoothScroll(i, 2000);
 				}
-			  }),
-			  
-            $(window).width() > 991)
+			}),
+			$(window).width() > 991)
+	 
         ) {
             var e = new ScrollMagic.Controller(),
                 i = $(".about"),
