@@ -1447,13 +1447,14 @@ input[type="button"]:focus {
 }
 
 @media (max-width: 767px) {
-	.work__heading {
-		font-size: 32px
-	}
+    .work__heading {
+        font-size: 32px;
+        display: none; /* Add this line to hide the heading on mobile */
+    }
 
-	.work__content-blurb h3 {
-		font-size: 30px
-	}
+    .work__content-blurb h3 {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2088,8 +2089,40 @@ height: auto;.comparison-container {
     background: #333; /* Or any color */
 }
 
+/* Media query for mobile screens */
 @media (max-width: 767px) {
+    .timeline-horizontal-container {
+        margin-left: 20px; /* Adjust these margins as needed */
+        margin-right: 20px;
+    }
     .timeline-item {
-        margin-right: 30px;
+        margin-right: 30px; /* Adjust space between items if necessary */
+    }
+}
+
+
+
+
+
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.scroll-indicator {
+    position: absolute;
+    left: 290px;
+    bottom: 180px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    animation: fadeInOut 2s infinite;
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 768px) {
+    .scroll-indicator {
+        display: block; /* Show only on mobile */
     }
 }
