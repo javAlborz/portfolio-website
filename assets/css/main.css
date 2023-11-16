@@ -2116,6 +2116,17 @@ height: auto;.comparison-container {
     }
 }
 
+/* Media query for mobile landscape screens */
+@media (max-width: 900px) and (orientation: landscape) {
+    .timeline-horizontal-container {
+        margin-left: 10px; /* Adjust these margins as needed for landscape */
+        margin-right: 10px;
+    }
+    .timeline-item {
+        margin-right: 20px; /* Adjust space between items if necessary for landscape */
+    }
+}
+
 
 
 
