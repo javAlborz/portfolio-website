@@ -710,6 +710,15 @@ input[type="button"]:focus {
 	display: none
 }
 
+/* Hide the CV link on desktop */
+@media (min-width: 992px) {
+    .navigation__cv {
+        display: none;
+    }
+}
+
+
+
 @media (max-width: 991px) {
 	.navigation__cta {
 		display: none
@@ -775,6 +784,13 @@ input[type="button"]:focus {
 		transition: color .2s ease-in-out, -webkit-transform .2s 1s;
 		transition: transform .2s 1s, color .2s ease-in-out;
 		transition: transform .2s 1s, color .2s ease-in-out, -webkit-transform .2s 1s
+	}
+
+	.navigation__container--is-open .navigation__list > li:nth-child(5) a {
+		-webkit-transition: color .2s ease-in-out, -webkit-transform .2s 1.2s;
+		transition: color .2s ease-in-out, -webkit-transform .2s 1.2s;
+		transition: transform .2s 1.2s, color .2s ease-in-out;
+		transition: transform .2s 1.2s, color .2s ease-in-out, -webkit-transform .2s 1.2s;
 	}
 
 	.navigation__container--is-open .navigation__list>li a {
