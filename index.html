@@ -298,6 +298,40 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<!-- jQuery local fallback -->
 	<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+
+
+
+
+	<!-- TouchSwipe plugin -->
+	<script src="assets/js/jquery.touchSwipe.min.js"></script>
+	<script>
+	$(function() {
+		// Assuming .work__visual is the container for your project images
+		$(".work__visual").swipe({
+			// Swipe left to go to the next project
+			swipeLeft: function() {
+				var nextIndex = $(".work__navigation-el--is-active").index() + 1;
+				if (nextIndex < $(".work__navigation-el").length) {
+					$(".work__navigation-el").eq(nextIndex).click();
+				}
+			},
+			// Swipe right to go to the previous project
+			swipeRight: function() {
+				var prevIndex = $(".work__navigation-el--is-active").index() - 1;
+				if (prevIndex >= 0) {
+					$(".work__navigation-el").eq(prevIndex).click();
+				}
+			},
+			// Other TouchSwipe options
+			threshold: 75 // Set the swipe threshold, you may need to adjust this
+		});
+	});
+	</script>
+
+
+
+
+
 	<script src="assets/js/functions.js"></script>
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID and uncomment -->
 	<!--
