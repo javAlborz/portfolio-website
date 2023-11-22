@@ -1945,8 +1945,6 @@ height: auto;.comparison-container {
 
 
 
-
-
 /* ... other global styles ... */
 
 .blog-list__heading {
@@ -2025,22 +2023,64 @@ height: auto;.comparison-container {
         /* You might want to also adjust font-sizes and other properties for mobile */
     }
 
-	.blog-header h1 {
+    .blog-header h1 {
         font-size: 28px; /* Adjust this value as needed for mobile screens */
     }
+
     .blog-content .post h2 {
         font-size: 20px; /* Adjust this value as needed for tablet screens */
     }
 }
 
 @media (max-width: 768px) {
-	.blog-header h1 {
+    .blog-header h1 {
         font-size: 28px; /* Adjust this value as needed for mobile screens */
     }
+
     .blog-content .post h2 {
         font-size: 20px; /* Adjust this value as needed for tablet screens */
     }
 }
+
+/* New styles for .blog-content */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.blog-content {
+    color: #000000; /* Black color for better contrast */
+    font-size: 18px; /* Example size, adjust as needed */
+    line-height: 1.6; /* Example line height, adjust as needed */
+    font-weight: 300; /* Lighter font weight */
+    font-family: 'Roboto', sans-serif; /* Using Roboto for blog content */
+}
+
+
+.blog-content p {
+    color: inherit; /* Ensures paragraphs inherit the color from .blog-content */
+    font-weight: inherit; /* Ensures paragraphs inherit the font weight */
+    /* Additional paragraph-specific styles here if needed */
+}
+
+.blog-content h1, .blog-content h2, .blog-content h3 {
+    color: inherit; /* Ensures headers inherit the color from .blog-content */
+    font-weight: normal; /* Standard font weight for headers, adjust as needed */
+    /* Additional header-specific styles here if needed */
+}
+
+
+/* Adjusting .blog-content styles for tablets */
+@media (max-width: 768px) {
+    .blog-content {
+        font-size: 16px; /* Slightly smaller font size for tablets */
+    }
+}
+
+/* Adjusting .blog-content styles for mobile devices */
+@media (max-width: 480px) {
+    .blog-content {
+        font-size: 15px; /* Even smaller font size for mobile devices */
+    }
+}
+
 
 
 
