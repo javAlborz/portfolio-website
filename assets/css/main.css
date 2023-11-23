@@ -2053,6 +2053,11 @@ height: auto;.comparison-container {
     font-family: 'Roboto', sans-serif; /* Using Roboto for blog content */
 }
 
+.blog-content em, 
+.blog-content i {
+    font-weight: normal; /* Ensures italicized text in blog content is not bold */
+}
+
 
 .blog-content p {
     color: inherit; /* Ensures paragraphs inherit the color from .blog-content */
