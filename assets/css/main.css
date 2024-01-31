@@ -2095,7 +2095,7 @@ height: auto;.comparison-container {
 /* Default styling for mobile */
 .timeline-horizontal-container {
     overflow-x: auto;
-    padding: 20px 0;
+    padding: 30px 0;
     white-space: nowrap;
     margin-left: 0;
     margin-right: 0;
@@ -2104,7 +2104,7 @@ height: auto;.comparison-container {
 /* Media query for larger screens (desktop) */
 @media (min-width: 768px) { /* Adjust this breakpoint as needed */
     .timeline-horizontal-container {
-        margin-left: 300px;
+        margin-left: 100px;
         margin-right: 20px;
     }
 }
@@ -2125,15 +2125,40 @@ height: auto;.comparison-container {
 }
 
 .timeline-dot {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #333; /* Or any color */
+    width: 70px; /* Adjusted for better visibility */
+    height: 50px; /* Adjusted for better visibility */
+    border-radius: 50%; /* Keeps the circular shape, remove if your logos are not circular */
+    background-image: url('../img/logo.png'); /* Generic logo path */
+    background-size: contain; /* Adjusted to ensure the logo fits within the dot */
+    background-position: center; /* Center the logo within the dot */
+    background-repeat: no-repeat; /* Prevent logo repetition */
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translateX(-50%);
+    /* Combined transformations for both X and Y adjustments */
+    transform: translate(-50%, -50%);
 }
+
+.timeline-dot.logo1 {
+    background-image: url('../img/NTNU.jpg'); /* Specific logo for .logo1 */
+    /* No additional changes needed unless specific adjustments are required */
+}
+
+.timeline-dot.logo2 {
+    background-image: url('../img/DTU.png'); /* Specific logo for .logo2 */
+    /* No additional changes needed unless specific adjustments are required */
+}
+
+.timeline-dot.logo3 {
+    background-image: url('../img/Miniature.png'); /* Specific logo for .logo2 */
+    /* No additional changes needed unless specific adjustments are required */
+}
+
+.timeline-dot.logo4 {
+    background-image: url('../img/senpage.png'); /* Specific logo for .logo2 */
+    /* No additional changes needed unless specific adjustments are required */
+}
+
 
 .timeline-content {
     padding-top: 40px; /* Space for the dot */
