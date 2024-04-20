@@ -526,7 +526,7 @@ input[type="button"]:focus {
 
 .blurb--framed {
 	padding: 15px 0;
-	background-color: #fafafa
+	background-color: #ffffff
 }
 
 .blurb__heading {
@@ -1137,7 +1137,9 @@ input[type="button"]:focus {
 	position: relative;
 	width: 100%;
 	padding: 45px 0 60px; /* Reduced padding-bottom */
-	overflow: hidden
+	overflow: hidden;
+	background-color: #fafafa;
+
 }
 
 .app-design__visual {
@@ -1307,8 +1309,8 @@ input[type="button"]:focus {
 .work {
 	position: relative;
 	width: 100%;
-	padding: 120px 0 60px 0;
-	background-color: #fafafa
+	padding: 120px 0 60px 0
+
 }
 
 .work__list {
@@ -1485,7 +1487,9 @@ input[type="button"]:focus {
 
 .blog {
 	position: relative;
-	padding: 60px 0
+	padding: 60px 0;
+	background-color: #fafafa
+
 }
 
 .blog__wrapper {
@@ -1577,8 +1581,7 @@ input[type="button"]:focus {
 
 .contact {
 	position: relative;
-	padding: 60px 0;
-	background-color: #fafafa
+	padding: 60px 0
 }
 
 .contact__wrapper {
@@ -1634,7 +1637,7 @@ input[type="button"]:focus {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 15px 0;
-	background-color: #fafafa;
+	background-color: #ffffff;
 	z-index: 1
 }
 
@@ -2099,6 +2102,9 @@ height: auto;.comparison-container {
     white-space: nowrap;
     margin-left: 0;
     margin-right: 0;
+	background-color: #fafafa;
+
+
 }
 
 /* Media query for larger screens (desktop) */
@@ -2156,6 +2162,11 @@ height: auto;.comparison-container {
 
 .timeline-dot.logo4 {
     background-image: url('../img/senpage.png'); /* Specific logo for .logo2 */
+    /* No additional changes needed unless specific adjustments are required */
+}
+
+.timeline-dot.logo5 {
+    background-image: url('../img/UFST.jpg'); /* Specific logo for .logo2 */
     /* No additional changes needed unless specific adjustments are required */
 }
 
