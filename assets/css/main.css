@@ -1052,6 +1052,11 @@ input[type="button"]:focus {
 	font-family: "Allura", cursive
 }
 
+.about__content-blurb.blurb.blurb--framed {
+    background-color: #fafafa; /* Set this to your section's gray background color */
+}
+
+
 @media (max-width: 991px) {
 	.about {
 		padding: 60px 0
@@ -2098,7 +2103,7 @@ height: auto;.comparison-container {
 /* Default styling for mobile */
 .timeline-horizontal-container {
     overflow-x: auto;
-    padding: 30px 0;
+    padding: 30px 30px;
     white-space: nowrap;
     margin-left: 0;
     margin-right: 0;
@@ -2110,8 +2115,8 @@ height: auto;.comparison-container {
 /* Media query for larger screens (desktop) */
 @media (min-width: 768px) { /* Adjust this breakpoint as needed */
     .timeline-horizontal-container {
-        margin-left: 100px;
-        margin-right: 20px;
+        margin-left: 2px;
+        margin-right: 2px;
     }
 }
 
@@ -2213,24 +2218,45 @@ height: auto;.comparison-container {
 
 
 
-@keyframes fadeInOut {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+@keyframes moveFadeReset {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(100px); /* Adjust distance as needed */
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(0px); /* Reset to start position */
+    }
 }
 
+
+
 .scroll-indicator {
+    display: none; /* Hide by default */
     position: absolute;
-    left: 290px;
-    bottom: 180px;
+    left: 290px; /* Adjust as necessary */
+    bottom: 180px; /* Adjust as necessary */
     font-size: 24px;
     color: #333;
     cursor: pointer;
-    animation: fadeInOut 2s infinite;
-    display: none; /* Hide by default */
+    animation: moveFadeReset 3s infinite; /* Use the previously defined animation */
 }
 
+/* Media query for mobile screens in portrait */
 @media (max-width: 768px) {
     .scroll-indicator {
-        display: block; /* Show only on mobile */
+        display: block; /* Show on mobile devices */
     }
 }
+
+/* Media query for mobile screens in landscape */
+@media (max-width: 900px) and (orientation: landscape) {
+    .scroll-indicator {
+        display: block; /* Show on mobile devices in landscape orientation */
+    }
+}
+
